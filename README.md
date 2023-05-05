@@ -2,7 +2,7 @@
 ## Group member
 -林炜皓 郭峥 孟雨琪 陈志昱 沈帅睿 李嘉轩
 
-# How to Run
+## How to Run
 You can simply run the 'main.py' to get the results.
 
 ## Introduction of code
