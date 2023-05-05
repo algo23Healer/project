@@ -2,7 +2,21 @@ import numpy as np
 import pandas as pd
 import os
 
+import sqlite3
+import sqlalchemy
+from sqlalchemy import create_engine
+from matplotlib import pyplot as plt
 
+connect_info = "sqlite:///FuturesMarketData.db"
+engine = create_engine(connect_info)
+sql_cmd = 'select * from AdjustedFuturesDaily'
+df = pd.read_sql(sql=sql_cmd, con=engine, index_col='Instrument')
+
+# conn=sqlite3.connect('FuturesMarketData.db')
+# print('数据库打开成功')
+# c=conn.cursor()#创建游标
+
+# df = c.execute("select * from AdjustedFuturesDaily").fetchall()#按行来读，每一行都是一个tuple，合起来是个list
 
 def read_data():
     pass
